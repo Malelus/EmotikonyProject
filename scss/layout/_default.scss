@@ -12,6 +12,7 @@
 //===// Container //===//
 
 .container {
+  position: relative;
   width: 80%;
   max-width: 1200px;
   margin: 0 auto;
@@ -130,6 +131,21 @@ section + section {
   display: block;
   position: absolute;
   z-index: 1;
+  opacity: 0.2;
+
+  &--light {
+    color: color(emoji-light);
+  }
+
+  &--dark {
+    color: color(emoji-dark);
+  }
+}
+
+.quote__emoji {
+  display: block;
+  position: absolute;
+  z-index: 3;
   opacity: 0.2;
 
   &--light {
@@ -274,13 +290,12 @@ section + section {
 //=============================//
 
 .definition {
-  position: relative;
   background: color(bg-accent);
   color: color(txt);
 
   &__emoji {
-    bottom: 20px;
-    left: 30px;
+    top: 50px;
+    left: -35px;
     font-size: 5em;
   }
 }
@@ -290,21 +305,20 @@ section + section {
 //=============================//
 
 .history {
-  position: relative;
   background: color(bg);
   color: color(txt-accent);
 
-  &__emoji--first {
-    top: 40px;
-    left: 10px;
-    font-size: 8em;
-  }
-
-  &__emoji--second {
-    bottom: 20px;
-    right: 20%;
-    font-size: 4em;
-    transform: translate(20%);
+  &__emoji {
+    &--first {
+      top: 0;
+      left: -30px;
+      font-size: 8em;
+    }
+    &--second {
+      bottom: -40px;
+      right: 10px;
+      font-size: 4em;
+    }
   }
 }
 
@@ -313,15 +327,13 @@ section + section {
 //=============================//
 
 .usage {
-  position: relative;
   background: color(bg-accent);
   color: color(txt);
 
   &__emoji {
-    bottom: 20px;
-    right: 12.5%;
+    bottom: -40px;
+    right: 20px;
     font-size: 4em;
-    transform: translate(12.5%);
   }
 }
 //=============================//
@@ -329,18 +341,32 @@ section + section {
 //=============================//
 
 .hate-speach {
-  position: relative;
   background: color(bg);
   color: color(txt-accent);
 
-  // &__emoji--first {
-  // }
+  &__emoji {
+    &--first {
+      top: -20px;
+      left: -40px;
+      font-size: 6em;
+    }
 
-  // &__emoji--second {
-  // }
+    &--second {
+      font-size: 4em;
 
-  // &__emoji--third {
-  // }
+      &--inner,
+      &--outer {
+        bottom: -30px;
+        right: -30px;
+      }
+    }
+
+    &--third {
+      bottom: -35px;
+      left: -35px;
+      font-size: 5em;
+    }
+  }
 }
 
 //==================//

@@ -284,6 +284,7 @@ img {
   }
 }
 .container {
+  position: relative;
   width: 80%;
   max-width: 1200px;
   margin: 0 auto;
@@ -384,6 +385,19 @@ section + section {
   color: #f2f2f2;
 }
 .section__emoji--dark {
+  color: #25154a;
+}
+
+.quote__emoji {
+  display: block;
+  position: absolute;
+  z-index: 3;
+  opacity: 0.2;
+}
+.quote__emoji--light {
+  color: #f2f2f2;
+}
+.quote__emoji--dark {
   color: #25154a;
 }
 
@@ -497,49 +511,60 @@ section + section {
 }
 
 .definition {
-  position: relative;
   background: #f2d785;
   color: #25154a;
 }
 .definition__emoji {
-  bottom: 20px;
-  left: 30px;
+  top: 50px;
+  left: -35px;
   font-size: 5em;
 }
 
 .history {
-  position: relative;
   background: #25154a;
   color: #f2f2f2;
 }
 .history__emoji--first {
-  top: 40px;
-  left: 10px;
+  top: 0;
+  left: -30px;
   font-size: 8em;
 }
 .history__emoji--second {
-  bottom: 20px;
-  right: 20%;
+  bottom: -40px;
+  right: 10px;
   font-size: 4em;
-  transform: translate(20%);
 }
 
 .usage {
-  position: relative;
   background: #f2d785;
   color: #25154a;
 }
 .usage__emoji {
-  bottom: 20px;
-  right: 12.5%;
+  bottom: -40px;
+  right: 20px;
   font-size: 4em;
-  transform: translate(12.5%);
 }
 
 .hate-speach {
-  position: relative;
   background: #25154a;
   color: #f2f2f2;
+}
+.hate-speach__emoji--first {
+  top: -20px;
+  left: -40px;
+  font-size: 6em;
+}
+.hate-speach__emoji--second {
+  font-size: 4em;
+}
+.hate-speach__emoji--second--inner, .hate-speach__emoji--second--outer {
+  bottom: -30px;
+  right: -30px;
+}
+.hate-speach__emoji--third {
+  bottom: -35px;
+  left: -35px;
+  font-size: 5em;
 }
 
 footer {
