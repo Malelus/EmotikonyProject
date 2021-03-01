@@ -1,4 +1,4 @@
-# Strona o Emotikonach i ich znaczeniu w komunikacji
+# Strona o Emotikonach i ich znaczeniu w komunikacji.
 
 > ### [Link do strony](https://malelus.github.io/Emotikony/)
 

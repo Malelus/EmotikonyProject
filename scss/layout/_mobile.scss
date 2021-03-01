@@ -49,7 +49,6 @@
     &__list {
       all: unset;
       display: flex;
-      flex-wrap: wrap;
       justify-content: space-around;
       margin: 1rem 0 0;
     }
@@ -68,14 +67,10 @@
   //===// Landing > hero //===//
 
   .hero {
-    width: 35rem;
+    min-width: 35rem;
   }
 
   //===// Landing > emoji //===//
-
-  .emoji-container {
-    flex-wrap: nowrap;
-  }
 
   .emoji-box {
     font-size: 15vmax;
@@ -83,10 +78,10 @@
   }
 
   //===============================//
-  //===// Main > Hate-speach //===//
+  //===// Main > Impact //===//
   //==============================//
 
-  .hate-speach {
+  .impact {
     &__emoji {
       &--quote {
         &--inner,

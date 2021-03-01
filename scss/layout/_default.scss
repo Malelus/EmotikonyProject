@@ -30,7 +30,7 @@
   position: fixed;
   right: 20px;
   bottom: 60px;
-  z-index: 100;
+  z-index: 2;
   opacity: 0;
   visibility: hidden;
   background: transparent;
@@ -187,7 +187,7 @@ header {
     position: absolute;
     top: 15px;
     right: 10px;
-    z-index: 5;
+    z-index: 2;
     color: color(txt-accent);
   }
 
@@ -198,7 +198,7 @@ header {
     bottom: 0;
     height: 100%;
     width: 15%;
-    z-index: 5;
+    z-index: 2;
   }
 
   &__list {
@@ -211,7 +211,7 @@ header {
     right: 0;
     bottom: 0;
     left: 0;
-    z-index: 4;
+    z-index: 1;
     height: 100%;
     width: 87.5%;
     opacity: 0;
@@ -251,7 +251,7 @@ header {
   }
 
   display: block;
-  width: 22.5rem;
+  min-width: 22.5rem;
 
   &__text {
     font-family: font(hero);
@@ -260,17 +260,20 @@ header {
       fill: color(hero-light);
       font-weight: 400;
     }
+
     &--second {
       fill: color(hero-dark);
 
       font-weight: 700;
       font-style: italic;
     }
+
     &--third {
       fill: color(hero-light);
       font-weight: 700;
       font-style: italic;
     }
+
     &--fourth {
       fill: color(hero-dark);
       font-weight: 300;
@@ -338,10 +341,10 @@ header {
 }
 
 //========================//
-//===// Main > Usage //===//
+//===// Main > Meaning //===//
 //========================//
 
-.usage {
+.meaning {
   background: color(bg-accent);
   color: color(txt);
 
@@ -352,10 +355,10 @@ header {
   }
 }
 //===============================//
-//===// Main > Hate-speach //===//
+//===// Main > Impact //===//
 //==============================//
 
-.hate-speach {
+.impact {
   background: color(bg);
   color: color(txt-accent);
 
