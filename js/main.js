@@ -38,11 +38,8 @@ window.onload = () => {
     '--transition-time',
     '--btn-anim-time',
     '--popup-time',
-    '--logo-anim-time',
     '--nav-hide-time',
     '--nav-show-time',
-    '--anim-delay',
-    '--anim-delay--logo-icon',
   ];
 
   // Defining const for global variables source and quantity of variable array
@@ -105,13 +102,9 @@ window.onload = () => {
     console.log(`  - transition: ` + durationsArray[1]);
     console.log(`# Button animation time: ` + durationsArray[2]);
     console.log(`# Popup time: ` + durationsArray[3]);
-    console.log(`# Logo animation time: ` + durationsArray[4]);
     console.log(`# Navigation:`);
-    console.log(`  - hide: ` + durationsArray[5]);
-    console.log(`  - show: ` + durationsArray[6]);
-    console.log(`# Delays:`);
-    console.log(`  - default: ` + durationsArray[7]);
-    console.log(`  - logo icon: ` + durationsArray[8]);
+    console.log(`  - hide: ` + durationsArray[4]);
+    console.log(`  - show: ` + durationsArray[5]);
   }
 
   //====================//

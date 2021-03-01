@@ -48,15 +48,15 @@ img {
   }
 }
 :root {
-  --transition-static: 0.25s;
-  --transition-time: 0.25s;
+  --transition-static: 0.35s;
+  --transition-time: 0.35s;
   --btn-anim-time: 0.2s;
   --popup-time: 0.4s;
-  --logo-anim-time: 7.5s;
+  --logo-anim-time: ;
   --nav-hide-time: 0.35s;
   --nav-show-time: 0.5s;
-  --anim-delay: 0.4s;
-  --anim-delay--logo-icon: 1.15s;
+  --anim-delay: ;
+  --anim-delay--logo-icon: ;
 }
 
 .btn {
@@ -258,8 +258,8 @@ img {
   width: 100%;
   bottom: 0;
   z-index: 101;
-  background: #a885f2;
-  transition: 0.25s ease-out;
+  background: #25154a;
+  transition: 0.35s ease-out;
 }
 .slide-r-l.transition--active {
   left: 0;

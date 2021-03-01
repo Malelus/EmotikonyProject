@@ -15,7 +15,7 @@
   width: 100%;
   bottom: 0;
   z-index: 101;
-  background: color(accent);
+  background: color(bg);
   transition: time(transition-time) ease-out;
 
   &.transition--active {
