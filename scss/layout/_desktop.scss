@@ -42,21 +42,6 @@
     gap: 0.5em;
   }
 
-  //================//
-  //===// Main //===//
-  //================//
-
-  //===// Section elements //===//
-
-  .section__title {
-    font-size: 2.25rem;
-    margin-bottom: 1em;
-  }
-
-  .section__text {
-    font-size: 1.15rem;
-  }
-
   .quote {
     &-1 {
       grid-area: a;
@@ -97,6 +82,20 @@
     &-10 {
       grid-area: j;
     }
+  }
+
+  //================//
+  //===// Main //===//
+  //================//
+
+  //===// Section elements //===//
+
+  .section__title {
+    font-size: 2.5rem;
+  }
+
+  .section__text {
+    font-size: 1.3rem;
   }
 
   //==================================//
@@ -161,8 +160,8 @@
       &--quote {
         &--inner,
         &--outer {
-          bottom: -32.5px;
-          right: -32.5px;
+          bottom: -33.5px;
+          right: -33.5px;
         }
       }
     }

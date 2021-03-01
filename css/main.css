@@ -607,7 +607,6 @@ footer {
 
   .section__title {
     font-size: 2.25rem;
-    margin-bottom: 1em;
   }
 
   .section__text {
@@ -711,15 +710,6 @@ footer {
     gap: 0.5em;
   }
 
-  .section__title {
-    font-size: 2.25rem;
-    margin-bottom: 1em;
-  }
-
-  .section__text {
-    font-size: 1.15rem;
-  }
-
   .quote-1 {
     grid-area: a;
   }
@@ -749,6 +739,14 @@ footer {
   }
   .quote-10 {
     grid-area: j;
+  }
+
+  .section__title {
+    font-size: 2.5rem;
+  }
+
+  .section__text {
+    font-size: 1.3rem;
   }
 
   .landing {
@@ -792,8 +790,8 @@ footer {
   }
 
   .hate-speach__emoji--quote--inner, .hate-speach__emoji--quote--outer {
-    bottom: -32.5px;
-    right: -32.5px;
+    bottom: -33.5px;
+    right: -33.5px;
   }
 
   .footer__text {
