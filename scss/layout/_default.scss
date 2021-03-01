@@ -1,0 +1,370 @@
+//================================================================//
+//===// Incorporating required default layout scss variables //===//
+//================================================================//
+
+@use '../global' as *;
+@use '../components' as *;
+
+//====================//
+//===// Reusable //===//
+//====================//
+
+//===// Container //===//
+
+.container {
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+//===// Text decoration //===//
+
+.bold {
+  font-weight: 600;
+}
+
+//===// Scroll up //===//
+
+.scrollUp {
+  position: fixed;
+  right: 20px;
+  bottom: 60px;
+  z-index: 100;
+  opacity: 0;
+  visibility: hidden;
+  background: transparent;
+  box-shadow: none;
+  transition: all time(btn-anim-time) ease;
+
+  &.scrollUp--active {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+//================//
+//===// Body //===//
+//================//
+
+body {
+  background: color(bg);
+  color: color(txt);
+  font-family: font(txt);
+
+  &::-webkit-scrollbar {
+    width: 0.8rem;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: color(bg);
+    margin: 0.08rem 0;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: color(accent);
+    border: 2.75px solid color(bg);
+    border-radius: 10px;
+  }
+}
+
+//================//
+//===// Main //===//
+//================//
+
+section + section {
+  padding: 2em 0 3em 0;
+}
+
+//===// Section elements //===//
+
+.section__title {
+  position: relative;
+  z-index: 2;
+  font-size: 2rem;
+  margin-bottom: 1em;
+
+  &--left {
+    text-align: left;
+  }
+
+  &--right {
+    text-align: right;
+  }
+}
+
+.section__text {
+  position: relative;
+  z-index: 2;
+  text-align: justify;
+  font-size: 1rem;
+
+  & + & {
+    margin: 2rem 0 1rem 0;
+  }
+}
+
+.section__quote {
+  display: block;
+  position: relative;
+  z-index: 2;
+  text-align: left;
+  border-radius: 10px;
+  padding: 1em 2em;
+
+  & + & {
+    margin: 1em 0 0 0;
+  }
+
+  &--light {
+    background: color(txt-accent);
+    color: color(txt);
+  }
+
+  &--dark {
+    background: color(bg);
+    color: color(txt-accent);
+  }
+}
+
+.section__emoji {
+  display: block;
+  position: absolute;
+  z-index: 1;
+  opacity: 0.2;
+
+  &--light {
+    color: color(emoji-light);
+  }
+
+  &--dark {
+    color: color(emoji-dark);
+  }
+}
+
+//==================================//
+//===// Main > Landing section //===//
+//==================================//
+
+.landing {
+  position: relative;
+  height: 100vh;
+}
+
+//===// Landing > navbar //===//
+
+.nav {
+  &-toggle {
+    position: absolute;
+    top: 15px;
+    right: 10px;
+    z-index: 5;
+    color: color(txt-accent);
+  }
+
+  &-close {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    height: 100%;
+    width: 15%;
+    z-index: 5;
+  }
+
+  &__list {
+    display: grid;
+    justify-content: space-evenly;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 4;
+    height: 100%;
+    width: 87.5%;
+    opacity: 0;
+    visibility: hidden;
+    background: color(bg);
+    border-left: 5px solid color(bg-accent);
+    text-align: center;
+    transform: translateX(100%);
+    transition: opacity time(nav-show-time) ease, visibility time(nav-show-time) ease;
+    animation: nav-hide time(nav-hide-time) ease-in-out forwards;
+
+    &--visibility {
+      opacity: 1;
+      visibility: visible;
+      animation: nav-show time(nav-show-time) ease-in-out forwards;
+    }
+  }
+
+  &__link {
+    color: #f2d785;
+    font-size: 1.25rem;
+    cursor: pointer;
+
+    @include mouse-hover;
+  }
+}
+
+//===// Landing > hero //===//
+
+.hero {
+  &-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 2;
+    transform: translate(-50%, -50%);
+  }
+
+  width: 22.5rem;
+  display: block;
+
+  &__text {
+    &--first {
+      fill: color(hero-light);
+      font-family: font(hero);
+      font-weight: 400;
+    }
+    &--second {
+      fill: color(hero-dark);
+      font-family: font(hero);
+      font-weight: 700;
+      font-style: italic;
+    }
+    &--third {
+      fill: color(hero-light);
+      font-family: font(hero);
+      font-weight: 700;
+      font-style: italic;
+    }
+    &--fourth {
+      fill: color(hero-dark);
+      font-family: font(hero);
+      font-weight: 300;
+    }
+  }
+}
+
+//===// Landing > emoji //===//
+
+.emoji-container {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+  width: 100%;
+  overflow: hidden;
+  opacity: 0.3;
+}
+
+.emoji-box {
+  color: color(emoji);
+  font-size: 10vmax;
+  margin: auto;
+  pointer-events: none;
+}
+
+//=============================//
+//===// Main > Definition //===//
+//=============================//
+
+.definition {
+  position: relative;
+  background: color(bg-accent);
+  color: color(txt);
+
+  &__emoji {
+    bottom: 20px;
+    left: 30px;
+    font-size: 5em;
+  }
+}
+
+//=============================//
+//===// Main > History //===//
+//=============================//
+
+.history {
+  position: relative;
+  background: color(bg);
+  color: color(txt-accent);
+
+  &__emoji--first {
+    top: 40px;
+    left: 10px;
+    font-size: 8em;
+  }
+
+  &__emoji--second {
+    bottom: 20px;
+    right: 20%;
+    font-size: 4em;
+    transform: translate(20%);
+  }
+}
+
+//=============================//
+//===// Main > Usage //===//
+//=============================//
+
+.usage {
+  position: relative;
+  background: color(bg-accent);
+  color: color(txt);
+
+  &__emoji {
+    bottom: 20px;
+    right: 12.5%;
+    font-size: 4em;
+    transform: translate(12.5%);
+  }
+}
+//=============================//
+//===// Main > Hate-speach //===//
+//=============================//
+
+.hate-speach {
+  position: relative;
+  background: color(bg);
+  color: color(txt-accent);
+
+  // &__emoji--first {
+  // }
+
+  // &__emoji--second {
+  // }
+
+  // &__emoji--third {
+  // }
+}
+
+//==================//
+//===// Footer //===//
+//==================//
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  background: color(bg-accent);
+  padding: 0.25em 1.5em 0.55em 1.5em;
+}
+
+//===// Footer > Content //===//
+
+.footer {
+  &__text {
+    color: color(bg);
+    font-family: font(txt);
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
+}

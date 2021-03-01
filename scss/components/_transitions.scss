@@ -1,0 +1,24 @@
+//=============================================================//
+//===// Incorporating required transitions scss variables //===//
+//=============================================================//
+
+@use '../global' as *;
+
+//===========================//
+//===// Page transition //===//
+//===========================//
+
+.slide-r-l {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  bottom: 0;
+  z-index: 101;
+  background: color(accent);
+  transition: time(transition-time) ease-out;
+
+  &.transition--active {
+    left: 0;
+  }
+}

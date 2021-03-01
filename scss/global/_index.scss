@@ -1,0 +1,50 @@
+//==============================================//
+//===// Incorporating dependent scss files //===//
+//==============================================//
+
+@use './brakepoints' as *;
+@use './fonts' as *;
+@use './colors' as *;
+@use './timings' as *;
+
+//===============================//
+//===// Shortening function //===//
+//===============================//
+
+//===// Responsive layouts //===//
+
+@function brake($brakepoint) {
+  @return map-get($brake, $brakepoint);
+}
+
+//===// Fonts //===//
+
+@function font($font-name) {
+  @return map-get($font, $font-name);
+}
+
+//===// Colors //===//
+
+@function color($color-name) {
+  @return map-get($color, $color-name);
+}
+
+//===// Timings //===//
+
+@function time($timing-name) {
+  @return map-get($time, $timing-name);
+}
+
+//===// Exporting timings for js //===//
+
+:root {
+  --transition-static: #{time(transition-static)};
+  --transition-time: #{time(transition-time)};
+  --btn-anim-time: #{time(btn-anim-time)};
+  --popup-time: #{time(popup-time)};
+  --logo-anim-time: #{time(logo-anim-time)};
+  --nav-hide-time: #{time(nav-hide-time)};
+  --nav-show-time: #{time(nav-show-time)};
+  --anim-delay: #{time(anim-delay)};
+  --anim-delay--logo-icon: #{time(anim-delay--logo-icon)};
+}

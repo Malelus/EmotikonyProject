@@ -1,0 +1,19 @@
+//=================//
+//===// Fonts //===//
+//=================//
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
+
+$font: (
+  'txt': (
+    'Poppins',
+    sans-serif,
+  ),
+  'hero': (
+    'Segoe UI',
+    sans-serif,
+  ),
+  'fa': (
+    'Font Awesome 5 Free',
+  ),
+);

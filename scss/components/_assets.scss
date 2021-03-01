@@ -1,0 +1,232 @@
+//========================================================//
+//===// Incorporating required assets scss variables //===//
+//========================================================//
+
+@use '../global' as *;
+@use './mixins' as *;
+
+//===================//
+//===// Buttons //===//
+//===================//
+
+.btn {
+  position: relative;
+  background: color(bg);
+  border: none;
+  outline: none;
+  color: color(bg-accent);
+  cursor: pointer;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+  transition: opacity time(btn-anim-time) ease;
+
+  &--scrollUp {
+    font-size: 2rem;
+  }
+
+  &--outer {
+    font-size: 0.9rem;
+  }
+
+  &--inner {
+    background: color(bg-accent);
+    color: color(bg);
+    font-size: 1.175rem;
+
+    & > .btn--icon {
+      background: color(bg-accent);
+      color: color(bg);
+    }
+  }
+
+  &--icon {
+    pointer-events: none;
+    font-family: 'Font Awesome 5 Free';
+    box-shadow: none;
+
+    &--rounded {
+      border-radius: 50%;
+    }
+  }
+
+  //===// Popup buttons //===//
+
+  &--about {
+    font-weight: 400;
+    border-radius: 50px;
+    margin-top: 0.5rem;
+    padding: 0.5em 0.8em;
+
+    @include mouse-hover;
+
+    &:hover .btn--info {
+      transform: scale(1.15, 1.15);
+    }
+
+    &:hover .btn--close {
+      transform: scale(1.15, 1.15) rotate(180deg);
+    }
+  }
+
+  &--info,
+  &--close {
+    transition: transform time(btn-anim-time) ease;
+    margin-right: 0.1em;
+  }
+}
+
+//=====================//
+//===// Hamburger //===//
+//=====================//
+
+.hamburger {
+  display: inline-block;
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  margin: 0;
+  padding: 10px;
+  transition: transform 0.15s ease-in-out, opacity time(btn-anim-time) ease;
+
+  @include mouse-hover;
+
+  &__box {
+    display: inline-block;
+    position: relative;
+    height: 18px;
+    width: 30px;
+  }
+
+  &__inner {
+    @include hamburger-line;
+
+    top: 50%;
+    left: 0;
+    transition: background-color 0.05s 0.05s ease-in-out;
+    transform: translateY(-50%);
+
+    &::before,
+    &::after {
+      @include hamburger-line;
+
+      content: '';
+      left: 0;
+      transition: transform 0.15s 0.05s ease-in-out;
+    }
+
+    &::before {
+      top: -10px;
+    }
+
+    &::after {
+      top: 10px;
+    }
+  }
+
+  &--active &__inner {
+    background: transparent;
+  }
+
+  &--active &__inner::before {
+    transform: translateY(10px) rotate(45deg);
+  }
+
+  &--active &__inner::after {
+    transform: translateY(-10px) rotate(-45deg);
+  }
+}
+
+//=================//
+//===// Popup //===//
+//=================//
+
+.popup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity time(popup-time), visibility time(popup-time);
+
+  &.popup--active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+  }
+
+  &__overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+    background: rgba(0, 0, 0, 0.5);
+  }
+
+  &__inner {
+    position: relative;
+    z-index: 1;
+    max-width: 600px;
+    background: color(bg);
+    border-radius: 6.5px;
+    padding: 3.5rem 2.2rem;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  &__title {
+    color: color(txt-accent);
+    font-size: 1.85rem;
+    font-weight: 700;
+    letter-spacing: 0.225rem;
+    margin-bottom: 0.85rem;
+  }
+
+  &__subtitle {
+    color: color(txt-accent);
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 2.2rem 0 0.8rem 0;
+  }
+
+  &__text {
+    color: color(txt-accent);
+    font-size: 1.15rem;
+    font-weight: 400;
+
+    & + & {
+      margin-top: 0.4em;
+    }
+
+    &:last-of-type {
+      margin-bottom: 1.55rem;
+    }
+  }
+
+  &__link {
+    color: color(bg-accent);
+    font-size: 1rem;
+    margin-left: 0.25em;
+    transition: opacity time(btn-anim-time) ease;
+
+    @include mouse-hover;
+  }
+
+  &__icon {
+    color: color(bg-accent);
+  }
+
+  &__circle {
+    position: relative;
+    top: 65%;
+    font-size: 0.25rem;
+    transform: translateY(-65%);
+  }
+}

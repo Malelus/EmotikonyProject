@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="hero" viewBox="0 0 948 473">
+  <g class="hero__text" data-name="Hero Text" transform="translate(1)">
+    <text class="hero__text--first" transform="translate(61 404)" font-size="221" font-family="SegoeUIBlack-Italic, Segoe UI" font-style="italic"><tspan x="0" y="0">MOWA</tspan></text>
+    <text class="hero__text--second" transform="translate(33 238)" font-size="221" font-family="SegoeUIBlack-Italic, Segoe UI" font-style="italic"><tspan x="0" y="0">jako</tspan></text>
+    <text class="hero__text--third" transform="translate(471 458)" font-size="59" font-family="SegoeUI-Light, Segoe UI" font-weight="300" letter-spacing="0.319em"><tspan x="0" y="0">NIENAWIŚCI</tspan></text>
+    <text class="hero__text--fourth" transform="translate(338 109)" font-size="101" font-family="SegoeUI, Segoe UI"><tspan x="0" y="0">EMOTIKONY</tspan></text>
+  </g>
+</svg>
