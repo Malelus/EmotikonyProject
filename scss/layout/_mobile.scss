@@ -2,7 +2,7 @@
 //===// Incorporating required mobile layout scss variables //===//
 //===============================================================//
 
-// @use '../global' as *;
+@use '../global' as *;
 @use '../components' as *;
 
 //==============================================//
@@ -14,25 +14,159 @@
   //===// Reusable //===//
   //====================//
 
-  //================//
-  //===// Body //===//
-  //================//
+  //===// Scroll up //===//
 
-  //==================//
-  //===// Header //===//
-  //==================//
-
-  //===// Header > //===//
+  .scrollUp {
+    left: 7.5px;
+  }
 
   //================//
   //===// Main //===//
   //================//
 
-  //===// Main > //===//
+  //===// Section elements //===//
+
+  .section__title {
+    font-size: 2.25rem;
+    margin-bottom: 1em;
+  }
+
+  .section__text {
+    font-size: 1.15rem;
+  }
+
+  //==================================//
+  //===// Main > Landing section //===//
+  //==================================//
+
+  //===// Landing > navbar //===//
+
+  .nav {
+    &-toggle,
+    &-close {
+      display: none;
+    }
+
+    &__list {
+      all: unset;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      margin: 1rem 0 0;
+    }
+
+    &__item {
+      & + & {
+        margin: 0 0 0 1em;
+      }
+    }
+
+    &__link {
+      font-size: 1.3rem;
+    }
+  }
+
+  //===// Landing > hero //===//
+
+  .hero {
+    width: 35rem;
+  }
+
+  //===// Landing > emoji //===//
+
+  .emoji-container {
+    flex-wrap: nowrap;
+  }
+
+  .emoji-box {
+    font-size: 15vmax;
+    margin: 0.5rem auto 0;
+  }
+
+  //===============================//
+  //===// Main > Hate-speach //===//
+  //==============================//
+
+  .hate-speach {
+    &__emoji {
+      &--quote {
+        &--inner,
+        &--outer {
+          bottom: -30.5px;
+          right: -30.5px;
+        }
+      }
+    }
+  }
 
   //==================//
   //===// Footer //===//
   //==================//
 
-  //===// Footer > //===//
+  //===// Footer > Content //===//
+
+  .footer {
+    &__text {
+      font-size: 1.15rem;
+    }
+  }
+
+  //==================//
+  //===// Assets //===//
+  //==================//
+
+  //===// Buttons //===//
+
+  .btn {
+    &--scrollUp {
+      font-size: 2.5rem;
+    }
+
+    &--outer {
+      font-size: 1rem;
+    }
+
+    &--inner {
+      font-size: 1.175rem;
+    }
+  }
+
+  //===// Popup //===//
+
+  .popup {
+    &__title {
+      font-size: 2.1rem;
+
+      &--icon {
+        font-size: 1.8rem;
+      }
+    }
+
+    &__subtitle {
+      font-size: 1.5rem;
+    }
+
+    &__text {
+      font-size: 1.35rem;
+
+      & + & {
+        margin-top: 0.5em;
+      }
+
+      &:last-of-type {
+        margin-bottom: 1.8rem;
+      }
+    }
+
+    &__link {
+      font-size: 1.175rem;
+      margin-left: 0.25em;
+    }
+
+    &__circle {
+      top: 55%;
+      font-size: 0.5rem;
+      transform: translateY(-55%);
+    }
+  }
 }

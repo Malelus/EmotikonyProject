@@ -2,7 +2,7 @@
 //===// Incorporating required desktop layout scss variables //===//
 //================================================================//
 
-// @use '../global' as *;
+@use '../global' as *;
 @use '../components' as *;
 
 //==============================================//
@@ -14,25 +14,190 @@
   //===// Reusable //===//
   //====================//
 
-  //================//
-  //===// Body //===//
-  //================//
+  //===// Scroll up //===//
 
-  //==================//
-  //===// Header //===//
-  //==================//
+  .scrollUp {
+    left: auto;
+    right: 15px;
+  }
 
-  //===// Header > //===//
+  //===// Quotes container //===//
+
+  .quotes-container-big {
+    display: grid;
+    align-items: baseline;
+    grid-template-areas:
+      'a e'
+      'b g'
+      'c h'
+      'd i'
+      'f j';
+    gap: 0.25em;
+  }
+
+  .quotes-container-small {
+    display: grid;
+    align-items: baseline;
+    grid-template-areas: 'a b';
+    gap: 0.5em;
+  }
 
   //================//
   //===// Main //===//
   //================//
 
-  //===// Main > //===//
+  //===// Section elements //===//
+
+  .section__title {
+    font-size: 2.25rem;
+    margin-bottom: 1em;
+  }
+
+  .section__text {
+    font-size: 1.15rem;
+  }
+
+  .quote {
+    &-1 {
+      grid-area: a;
+    }
+
+    &-2 {
+      grid-area: b;
+    }
+
+    &-3 {
+      grid-area: c;
+    }
+
+    &-4 {
+      grid-area: d;
+    }
+
+    &-5 {
+      grid-area: e;
+    }
+
+    &-6 {
+      grid-area: f;
+    }
+
+    &-7 {
+      grid-area: g;
+    }
+
+    &-8 {
+      grid-area: h;
+    }
+
+    &-9 {
+      grid-area: i;
+    }
+
+    &-10 {
+      grid-area: j;
+    }
+  }
+
+  //==================================//
+  //===// Main > Landing section //===//
+  //==================================//
+
+  .landing {
+    display: grid;
+    grid-template-areas: 'main emoji';
+    grid-template-columns: 2fr 1fr;
+    gap: 1em;
+  }
+
+  .main-container {
+    position: relative;
+    grid-area: main;
+  }
+
+  //===// Landing > navbar //===//
+
+  .nav {
+    &__link {
+      font-size: 1.7rem;
+    }
+  }
+
+  //===// Landing > hero //===//
+
+  .hero {
+    &-container {
+      position: relative;
+    }
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%) scale(0.9);
+  }
+
+  //===// Landing > emoji //===//
+
+  .emoji-container {
+    all: unset;
+    grid-area: emoji;
+    background: white;
+    overflow: hidden;
+    padding: 0 1em;
+  }
+
+  .emoji-box {
+    font-size: 8.4vmax;
+    margin: auto;
+  }
+
+  //=============================//
+  //===// Main > Definition //===//
+  //=============================//
+
+  // .definition {
+  // }
+
+  //==========================//
+  //===// Main > History //===//
+  //==========================//
+
+  // .history {
+  // }
+
+  //========================//
+  //===// Main > Usage //===//
+  //========================//
+
+  // .usage {
+  // }
+
+  //===============================//
+  //===// Main > Hate-speach //===//
+  //==============================//
+
+  .hate-speach {
+    &__emoji {
+      &--quote {
+        &--inner,
+        &--outer {
+          bottom: -32.5px;
+          right: -32.5px;
+        }
+      }
+    }
+  }
 
   //==================//
   //===// Footer //===//
   //==================//
 
-  //===// Footer > //===//
+  //===// Footer > Content //===//
+
+  .footer {
+    &__text {
+      font-size: 1.3rem;
+    }
+  }
 }

@@ -42,6 +42,7 @@
     pointer-events: none;
     font-family: 'Font Awesome 5 Free';
     box-shadow: none;
+    padding: 1px;
 
     &--rounded {
       border-radius: 50%;
@@ -187,6 +188,10 @@
     font-weight: 700;
     letter-spacing: 0.225rem;
     margin-bottom: 0.85rem;
+
+    &--icon {
+      font-size: 1.6rem;
+    }
   }
 
   &__subtitle {

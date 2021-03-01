@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
 *,
 *::before,
 *::after {
@@ -88,6 +88,7 @@ img {
   pointer-events: none;
   font-family: "Font Awesome 5 Free";
   box-shadow: none;
+  padding: 1px;
 }
 .btn--icon--rounded {
   border-radius: 50%;
@@ -211,6 +212,9 @@ img {
   letter-spacing: 0.225rem;
   margin-bottom: 0.85rem;
 }
+.popup__title--icon {
+  font-size: 1.6rem;
+}
 .popup__subtitle {
   color: #f2f2f2;
   font-size: 1.25rem;
@@ -291,7 +295,7 @@ img {
 }
 
 .bold {
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .scrollUp {
@@ -328,8 +332,13 @@ body::-webkit-scrollbar-thumb {
   border-radius: 10px;
 }
 
+main {
+  position: relative;
+  z-index: 2;
+}
+
 section + section {
-  padding: 2em 0 3em 0;
+  padding: 3.5em 0 2.5em 0;
 }
 
 .section__title {
@@ -352,7 +361,7 @@ section + section {
   font-size: 1rem;
 }
 .section__text + .section__text {
-  margin: 2rem 0 1rem 0;
+  margin: 2em 0 1em 0;
 }
 
 .section__quote {
@@ -406,6 +415,11 @@ section + section {
   height: 100vh;
 }
 
+header {
+  position: relative;
+  z-index: 3;
+}
+
 .nav-toggle {
   position: absolute;
   top: 15px;
@@ -423,8 +437,9 @@ section + section {
   z-index: 5;
 }
 .nav__list {
-  display: grid;
-  justify-content: space-evenly;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
   align-items: center;
   position: fixed;
   top: 0;
@@ -458,8 +473,8 @@ section + section {
 }
 
 .hero {
-  width: 22.5rem;
   display: block;
+  width: 22.5rem;
 }
 .hero-container {
   position: absolute;
@@ -468,26 +483,25 @@ section + section {
   z-index: 2;
   transform: translate(-50%, -50%);
 }
+.hero__text {
+  font-family: "Segoe UI", sans-serif;
+}
 .hero__text--first {
   fill: #f2d785;
-  font-family: "Segoe UI", sans-serif;
   font-weight: 400;
 }
 .hero__text--second {
   fill: #a885f2;
-  font-family: "Segoe UI", sans-serif;
   font-weight: 700;
   font-style: italic;
 }
 .hero__text--third {
   fill: #f2d785;
-  font-family: "Segoe UI", sans-serif;
   font-weight: 700;
   font-style: italic;
 }
 .hero__text--fourth {
   fill: #a885f2;
-  font-family: "Segoe UI", sans-serif;
   font-weight: 300;
 }
 
@@ -505,6 +519,7 @@ section + section {
 
 .emoji-box {
   color: #000000;
+  text-align: center;
   font-size: 10vmax;
   margin: auto;
   pointer-events: none;
@@ -555,16 +570,16 @@ section + section {
   font-size: 6em;
 }
 .hate-speach__emoji--second {
-  font-size: 4em;
-}
-.hate-speach__emoji--second--inner, .hate-speach__emoji--second--outer {
-  bottom: -30px;
-  right: -30px;
-}
-.hate-speach__emoji--third {
-  bottom: -35px;
-  left: -35px;
+  bottom: -37.5px;
+  left: -37.5px;
   font-size: 5em;
+}
+.hate-speach__emoji--quote {
+  font-size: 3.5em;
+}
+.hate-speach__emoji--quote--inner, .hate-speach__emoji--quote--outer {
+  bottom: -27.5px;
+  right: -27.5px;
 }
 
 footer {
@@ -572,7 +587,7 @@ footer {
   justify-content: space-between;
   align-items: baseline;
   position: relative;
-  z-index: 2;
+  z-index: 1;
   width: 100%;
   background: #f2d785;
   padding: 0.25em 1.5em 0.55em 1.5em;
@@ -583,6 +598,207 @@ footer {
   font-family: "Poppins", sans-serif;
   font-size: 0.9rem;
   font-weight: 600;
+}
+
+@media screen and (min-width: 43.75em) {
+  .scrollUp {
+    left: 7.5px;
+  }
+
+  .section__title {
+    font-size: 2.25rem;
+    margin-bottom: 1em;
+  }
+
+  .section__text {
+    font-size: 1.15rem;
+  }
+
+  .nav-toggle, .nav-close {
+    display: none;
+  }
+  .nav__list {
+    all: unset;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 1rem 0 0;
+  }
+  .nav__item + .nav__item {
+    margin: 0 0 0 1em;
+  }
+  .nav__link {
+    font-size: 1.3rem;
+  }
+
+  .hero {
+    width: 35rem;
+  }
+
+  .emoji-container {
+    flex-wrap: nowrap;
+  }
+
+  .emoji-box {
+    font-size: 15vmax;
+    margin: 0.5rem auto 0;
+  }
+
+  .hate-speach__emoji--quote--inner, .hate-speach__emoji--quote--outer {
+    bottom: -30.5px;
+    right: -30.5px;
+  }
+
+  .footer__text {
+    font-size: 1.15rem;
+  }
+
+  .btn--scrollUp {
+    font-size: 2.5rem;
+  }
+  .btn--outer {
+    font-size: 1rem;
+  }
+  .btn--inner {
+    font-size: 1.175rem;
+  }
+
+  .popup__title {
+    font-size: 2.1rem;
+  }
+  .popup__title--icon {
+    font-size: 1.8rem;
+  }
+  .popup__subtitle {
+    font-size: 1.5rem;
+  }
+  .popup__text {
+    font-size: 1.35rem;
+  }
+  .popup__text + .popup__text {
+    margin-top: 0.5em;
+  }
+  .popup__text:last-of-type {
+    margin-bottom: 1.8rem;
+  }
+  .popup__link {
+    font-size: 1.175rem;
+    margin-left: 0.25em;
+  }
+  .popup__circle {
+    top: 55%;
+    font-size: 0.5rem;
+    transform: translateY(-55%);
+  }
+}
+@media screen and (min-width: 62.5em) {
+  .scrollUp {
+    left: auto;
+    right: 15px;
+  }
+
+  .quotes-container-big {
+    display: grid;
+    align-items: baseline;
+    grid-template-areas: "a e" "b g" "c h" "d i" "f j";
+    gap: 0.25em;
+  }
+
+  .quotes-container-small {
+    display: grid;
+    align-items: baseline;
+    grid-template-areas: "a b";
+    gap: 0.5em;
+  }
+
+  .section__title {
+    font-size: 2.25rem;
+    margin-bottom: 1em;
+  }
+
+  .section__text {
+    font-size: 1.15rem;
+  }
+
+  .quote-1 {
+    grid-area: a;
+  }
+  .quote-2 {
+    grid-area: b;
+  }
+  .quote-3 {
+    grid-area: c;
+  }
+  .quote-4 {
+    grid-area: d;
+  }
+  .quote-5 {
+    grid-area: e;
+  }
+  .quote-6 {
+    grid-area: f;
+  }
+  .quote-7 {
+    grid-area: g;
+  }
+  .quote-8 {
+    grid-area: h;
+  }
+  .quote-9 {
+    grid-area: i;
+  }
+  .quote-10 {
+    grid-area: j;
+  }
+
+  .landing {
+    display: grid;
+    grid-template-areas: "main emoji";
+    grid-template-columns: 2fr 1fr;
+    gap: 1em;
+  }
+
+  .main-container {
+    position: relative;
+    grid-area: main;
+  }
+
+  .nav__link {
+    font-size: 1.7rem;
+  }
+
+  .hero {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%) scale(0.9);
+  }
+  .hero-container {
+    position: relative;
+  }
+
+  .emoji-container {
+    all: unset;
+    grid-area: emoji;
+    background: white;
+    overflow: hidden;
+    padding: 0 1em;
+  }
+
+  .emoji-box {
+    font-size: 8.4vmax;
+    margin: auto;
+  }
+
+  .hate-speach__emoji--quote--inner, .hate-speach__emoji--quote--outer {
+    bottom: -32.5px;
+    right: -32.5px;
+  }
+
+  .footer__text {
+    font-size: 1.3rem;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -21,7 +21,7 @@
 //===// Text decoration //===//
 
 .bold {
-  font-weight: 600;
+  font-weight: 700;
 }
 
 //===// Scroll up //===//
@@ -72,8 +72,15 @@ body {
 //===// Main //===//
 //================//
 
+main {
+  position: relative;
+  z-index: 2;
+}
+
+//===// Section spacing //===//
+
 section + section {
-  padding: 2em 0 3em 0;
+  padding: 3.5em 0 2.5em 0;
 }
 
 //===// Section elements //===//
@@ -100,7 +107,7 @@ section + section {
   font-size: 1rem;
 
   & + & {
-    margin: 2rem 0 1rem 0;
+    margin: 2em 0 1em 0;
   }
 }
 
@@ -166,6 +173,13 @@ section + section {
   height: 100vh;
 }
 
+//===// Landing > header //===//
+
+header {
+  position: relative;
+  z-index: 3;
+}
+
 //===// Landing > navbar //===//
 
 .nav {
@@ -188,8 +202,9 @@ section + section {
   }
 
   &__list {
-    display: grid;
-    justify-content: space-evenly;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
     align-items: center;
     position: fixed;
     top: 0;
@@ -235,30 +250,29 @@ section + section {
     transform: translate(-50%, -50%);
   }
 
-  width: 22.5rem;
   display: block;
+  width: 22.5rem;
 
   &__text {
+    font-family: font(hero);
+
     &--first {
       fill: color(hero-light);
-      font-family: font(hero);
       font-weight: 400;
     }
     &--second {
       fill: color(hero-dark);
-      font-family: font(hero);
+
       font-weight: 700;
       font-style: italic;
     }
     &--third {
       fill: color(hero-light);
-      font-family: font(hero);
       font-weight: 700;
       font-style: italic;
     }
     &--fourth {
       fill: color(hero-dark);
-      font-family: font(hero);
       font-weight: 300;
     }
   }
@@ -280,6 +294,7 @@ section + section {
 
 .emoji-box {
   color: color(emoji);
+  text-align: center;
   font-size: 10vmax;
   margin: auto;
   pointer-events: none;
@@ -300,9 +315,9 @@ section + section {
   }
 }
 
-//=============================//
+//==========================//
 //===// Main > History //===//
-//=============================//
+//==========================//
 
 .history {
   background: color(bg);
@@ -322,9 +337,9 @@ section + section {
   }
 }
 
-//=============================//
+//========================//
 //===// Main > Usage //===//
-//=============================//
+//========================//
 
 .usage {
   background: color(bg-accent);
@@ -336,9 +351,9 @@ section + section {
     font-size: 4em;
   }
 }
-//=============================//
+//===============================//
 //===// Main > Hate-speach //===//
-//=============================//
+//==============================//
 
 .hate-speach {
   background: color(bg);
@@ -352,19 +367,19 @@ section + section {
     }
 
     &--second {
-      font-size: 4em;
+      bottom: -37.5px;
+      left: -37.5px;
+      font-size: 5em;
+    }
+
+    &--quote {
+      font-size: 3.5em;
 
       &--inner,
       &--outer {
-        bottom: -30px;
-        right: -30px;
+        bottom: -27.5px;
+        right: -27.5px;
       }
-    }
-
-    &--third {
-      bottom: -35px;
-      left: -35px;
-      font-size: 5em;
     }
   }
 }
@@ -378,7 +393,7 @@ footer {
   justify-content: space-between;
   align-items: baseline;
   position: relative;
-  z-index: 2;
+  z-index: 1;
   width: 100%;
   background: color(bg-accent);
   padding: 0.25em 1.5em 0.55em 1.5em;
