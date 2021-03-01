@@ -41,6 +41,8 @@
     opacity: 1;
     visibility: visible;
   }
+
+  @include mouse-hover;
 }
 
 //================//
@@ -233,7 +235,7 @@ header {
   &__link {
     color: #f2d785;
     font-size: 1.25rem;
-    cursor: pointer;
+    transition: opacity time(btn-anim-time) ease;
 
     @include mouse-hover;
   }

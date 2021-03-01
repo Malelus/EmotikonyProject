@@ -313,6 +313,9 @@ img {
   opacity: 1;
   visibility: visible;
 }
+.scrollUp:hover, .scrollUp:focus {
+  opacity: 0.8;
+}
 
 body {
   background: #25154a;
@@ -466,7 +469,7 @@ header {
 .nav__link {
   color: #f2d785;
   font-size: 1.25rem;
-  cursor: pointer;
+  transition: opacity 0.2s ease;
 }
 .nav__link:hover, .nav__link:focus {
   opacity: 0.8;
