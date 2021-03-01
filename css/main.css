@@ -795,6 +795,10 @@ footer {
   .footer__text {
     font-size: 1.3rem;
   }
+
+  .btn--scrollUp {
+    font-size: 3rem;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
