@@ -211,6 +211,7 @@ img {
   margin-bottom: 0.85rem;
 }
 .popup__title--icon {
+  color: #f2d785;
   font-size: 1.6rem;
 }
 .popup__subtitle {
