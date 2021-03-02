@@ -82,80 +82,76 @@ main {
 //===// Section spacing //===//
 
 section + section {
-  padding: 3.5em 0 2.5em 0;
+  padding: 3.5em 0 2.5em;
 }
 
 //===// Section elements //===//
 
-.section__title {
-  position: relative;
-  z-index: 2;
-  font-size: 2rem;
-  margin-bottom: 1em;
+.section {
+  &__title {
+    position: relative;
+    z-index: 2;
+    font-size: 2rem;
+    margin-bottom: 1em;
 
-  &--left {
+    &--left {
+      text-align: left;
+    }
+
+    &--right {
+      text-align: right;
+    }
+  }
+
+  &__text {
+    position: relative;
+    z-index: 2;
+    text-align: justify;
+    font-size: 1rem;
+
+    & + & {
+      margin: 2em 0 1em;
+    }
+  }
+
+  &__quote {
+    display: block;
+    position: relative;
+    z-index: 2;
     text-align: left;
-  }
+    border-radius: 10px;
+    padding: 1em 2em;
 
-  &--right {
-    text-align: right;
-  }
-}
+    & + & {
+      margin-top: 1em;
+    }
 
-.section__text {
-  position: relative;
-  z-index: 2;
-  text-align: justify;
-  font-size: 1rem;
+    &--light {
+      background: color(txt-accent);
+      color: color(txt);
+    }
 
-  & + & {
-    margin: 2em 0 1em 0;
-  }
-}
-
-.section__quote {
-  display: block;
-  position: relative;
-  z-index: 2;
-  text-align: left;
-  border-radius: 10px;
-  padding: 1em 2em;
-
-  & + & {
-    margin: 1em 0 0 0;
-  }
-
-  &--light {
-    background: color(txt-accent);
-    color: color(txt);
-  }
-
-  &--dark {
-    background: color(bg);
-    color: color(txt-accent);
+    &--dark {
+      background: color(bg);
+      color: color(txt-accent);
+    }
   }
 }
 
-.section__emoji {
-  display: block;
-  position: absolute;
-  z-index: 1;
-  opacity: 0.2;
-
-  &--light {
-    color: color(emoji-light);
+.emoji {
+  &--section {
+    display: block;
+    position: absolute;
+    z-index: 1;
+    opacity: 0.2;
   }
 
-  &--dark {
-    color: color(emoji-dark);
+  &--quote {
+    display: block;
+    position: absolute;
+    z-index: 3;
+    opacity: 0.2;
   }
-}
-
-.quote__emoji {
-  display: block;
-  position: absolute;
-  z-index: 3;
-  opacity: 0.2;
 
   &--light {
     color: color(emoji-light);
@@ -223,7 +219,7 @@ header {
     text-align: center;
     transform: translateX(100%);
     transition: opacity time(nav-show-time) ease, visibility time(nav-show-time) ease;
-    animation: nav-hide time(nav-hide-time) ease-in-out forwards;
+    animation: nav-hide time(nav-hide-time) ease-in-out;
 
     &--visibility {
       opacity: 1;
@@ -265,7 +261,6 @@ header {
 
     &--second {
       fill: color(hero-dark);
-
       font-weight: 700;
       font-style: italic;
     }
@@ -285,24 +280,26 @@ header {
 
 //===// Landing > emoji //===//
 
-.emoji-container {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  z-index: 1;
-  width: 100%;
-  overflow: hidden;
-  opacity: 0.3;
-}
+.emoji {
+  &-container {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    width: 100%;
+    opacity: 0.3;
+    overflow: hidden;
+  }
 
-.emoji-box {
-  color: color(emoji);
-  text-align: center;
-  font-size: 10vmax;
-  margin: auto;
-  pointer-events: none;
+  &-box {
+    color: color(emoji);
+    pointer-events: none;
+    text-align: center;
+    font-size: 10vmax;
+    margin: auto;
+  }
 }
 
 //=============================//
@@ -335,30 +332,30 @@ header {
       font-size: 8em;
     }
     &--second {
-      bottom: -40px;
       right: 10px;
+      bottom: -40px;
       font-size: 4em;
     }
   }
 }
 
-//========================//
+//==========================//
 //===// Main > Meaning //===//
-//========================//
+//==========================//
 
 .meaning {
   background: color(bg-accent);
   color: color(txt);
 
   &__emoji {
-    bottom: -40px;
     right: 20px;
+    bottom: -40px;
     font-size: 4em;
   }
 }
-//===============================//
+//=========================//
 //===// Main > Impact //===//
-//==============================//
+//=========================//
 
 .impact {
   background: color(bg);
@@ -382,8 +379,8 @@ header {
 
       &--inner,
       &--outer {
-        bottom: -27.5px;
         right: -27.5px;
+        bottom: -27.5px;
       }
     }
   }
@@ -401,7 +398,7 @@ footer {
   z-index: 1;
   width: 100%;
   background: color(bg-accent);
-  padding: 0.25em 1.5em 0.55em 1.5em;
+  padding: 0.25em 1.5em 0.55em;
 }
 
 //===// Footer > Content //===//

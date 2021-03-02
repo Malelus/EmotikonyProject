@@ -117,9 +117,7 @@ img {
   display: inline-block;
   background: transparent;
   border: none;
-  outline: none;
   cursor: pointer;
-  margin: 0;
   padding: 10px;
   transition: transform 0.15s ease-in-out, opacity 0.2s ease;
 }
@@ -219,7 +217,7 @@ img {
   color: #f2f2f2;
   font-size: 1.25rem;
   font-weight: 600;
-  margin: 2.2rem 0 0.8rem 0;
+  margin: 2.2rem 0 0.8rem;
 }
 .popup__text {
   color: #f2f2f2;
@@ -341,7 +339,7 @@ main {
 }
 
 section + section {
-  padding: 3.5em 0 2.5em 0;
+  padding: 3.5em 0 2.5em;
 }
 
 .section__title {
@@ -356,7 +354,6 @@ section + section {
 .section__title--right {
   text-align: right;
 }
-
 .section__text {
   position: relative;
   z-index: 2;
@@ -364,9 +361,8 @@ section + section {
   font-size: 1rem;
 }
 .section__text + .section__text {
-  margin: 2em 0 1em 0;
+  margin: 2em 0 1em;
 }
-
 .section__quote {
   display: block;
   position: relative;
@@ -376,7 +372,7 @@ section + section {
   padding: 1em 2em;
 }
 .section__quote + .section__quote {
-  margin: 1em 0 0 0;
+  margin-top: 1em;
 }
 .section__quote--light {
   background: #f2f2f2;
@@ -387,29 +383,22 @@ section + section {
   color: #f2f2f2;
 }
 
-.section__emoji {
+.emoji--section {
   display: block;
   position: absolute;
   z-index: 1;
   opacity: 0.2;
 }
-.section__emoji--light {
-  color: #f2f2f2;
-}
-.section__emoji--dark {
-  color: #25154a;
-}
-
-.quote__emoji {
+.emoji--quote {
   display: block;
   position: absolute;
   z-index: 3;
   opacity: 0.2;
 }
-.quote__emoji--light {
+.emoji--light {
   color: #f2f2f2;
 }
-.quote__emoji--dark {
+.emoji--dark {
   color: #25154a;
 }
 
@@ -459,7 +448,7 @@ header {
   text-align: center;
   transform: translateX(100%);
   transition: opacity 0.5s ease, visibility 0.5s ease;
-  animation: nav-hide 0.35s ease-in-out forwards;
+  animation: nav-hide 0.35s ease-in-out;
 }
 .nav__list--visibility {
   opacity: 1;
@@ -516,16 +505,15 @@ header {
   bottom: 0;
   z-index: 1;
   width: 100%;
-  overflow: hidden;
   opacity: 0.3;
+  overflow: hidden;
 }
-
 .emoji-box {
   color: #000000;
+  pointer-events: none;
   text-align: center;
   font-size: 10vmax;
   margin: auto;
-  pointer-events: none;
 }
 
 .definition {
@@ -548,8 +536,8 @@ header {
   font-size: 8em;
 }
 .history__emoji--second {
-  bottom: -40px;
   right: 10px;
+  bottom: -40px;
   font-size: 4em;
 }
 
@@ -558,8 +546,8 @@ header {
   color: #25154a;
 }
 .meaning__emoji {
-  bottom: -40px;
   right: 20px;
+  bottom: -40px;
   font-size: 4em;
 }
 
@@ -581,8 +569,8 @@ header {
   font-size: 3.5em;
 }
 .impact__emoji--quote--inner, .impact__emoji--quote--outer {
-  bottom: -27.5px;
   right: -27.5px;
+  bottom: -27.5px;
 }
 
 footer {
@@ -593,7 +581,7 @@ footer {
   z-index: 1;
   width: 100%;
   background: #f2d785;
-  padding: 0.25em 1.5em 0.55em 1.5em;
+  padding: 0.25em 1.5em 0.55em;
 }
 
 .footer__text {
@@ -608,10 +596,13 @@ footer {
     left: 7.5px;
   }
 
+  section + section {
+    padding: 3.7em 0 2.7em;
+  }
+
   .section__title {
     font-size: 2.25rem;
   }
-
   .section__text {
     font-size: 1.15rem;
   }
@@ -623,10 +614,10 @@ footer {
     all: unset;
     display: flex;
     justify-content: space-around;
-    margin: 1rem 0 0;
+    margin-top: 1rem;
   }
   .nav__item + .nav__item {
-    margin: 0 0 0 1em;
+    margin-left: 1em;
   }
   .nav__link {
     font-size: 1.3rem;
@@ -642,8 +633,8 @@ footer {
   }
 
   .impact__emoji--quote--inner, .impact__emoji--quote--outer {
-    bottom: -30.5px;
-    right: -30.5px;
+    bottom: -31.5px;
+    right: -31.5px;
   }
 
   .footer__text {
@@ -694,16 +685,15 @@ footer {
     right: 15px;
   }
 
-  .quotes-container-big {
+  .quotes-container {
     display: grid;
     align-items: baseline;
+  }
+  .quotes-container--big {
     grid-template-areas: "a e" "c d" "h j" "f b" "g i";
     gap: 0.25em;
   }
-
-  .quotes-container-small {
-    display: grid;
-    align-items: baseline;
+  .quotes-container--small {
     grid-template-areas: "a b";
     gap: 0.5em;
   }
@@ -739,10 +729,13 @@ footer {
     grid-area: j;
   }
 
+  section + section {
+    padding: 3.9em 0 2.9em;
+  }
+
   .section__title {
     font-size: 2.5rem;
   }
-
   .section__text {
     font-size: 1.3rem;
   }
@@ -777,19 +770,19 @@ footer {
   .emoji-container {
     all: unset;
     grid-area: emoji;
-    background: white;
     overflow: hidden;
+    background: white;
     padding: 0 1em;
   }
-
   .emoji-box {
+    color: #25154a;
     font-size: 8.4vw;
     margin: auto;
   }
 
   .impact__emoji--quote--inner, .impact__emoji--quote--outer {
-    bottom: -33.5px;
-    right: -33.5px;
+    bottom: -36.5px;
+    right: -36.5px;
   }
 
   .footer__text {

@@ -23,23 +23,24 @@
 
   //===// Quotes container //===//
 
-  .quotes-container-big {
+  .quotes-container {
     display: grid;
     align-items: baseline;
-    grid-template-areas:
-      'a e'
-      'c d'
-      'h j'
-      'f b'
-      'g i';
-    gap: 0.25em;
-  }
 
-  .quotes-container-small {
-    display: grid;
-    align-items: baseline;
-    grid-template-areas: 'a b';
-    gap: 0.5em;
+    &--big {
+      grid-template-areas:
+        'a e'
+        'c d'
+        'h j'
+        'f b'
+        'g i';
+      gap: 0.25em;
+    }
+
+    &--small {
+      grid-template-areas: 'a b';
+      gap: 0.5em;
+    }
   }
 
   .quote {
@@ -88,14 +89,22 @@
   //===// Main //===//
   //================//
 
-  //===// Section elements //===//
+  //===// Section spacing //===//
 
-  .section__title {
-    font-size: 2.5rem;
+  section + section {
+    padding: 3.9em 0 2.9em;
   }
 
-  .section__text {
-    font-size: 1.3rem;
+  //===// Section elements //===//
+
+  .section {
+    &__title {
+      font-size: 2.5rem;
+    }
+
+    &__text {
+      font-size: 1.3rem;
+    }
   }
 
   //==================================//
@@ -138,30 +147,33 @@
 
   //===// Landing > emoji //===//
 
-  .emoji-container {
-    all: unset;
-    grid-area: emoji;
-    background: white;
-    overflow: hidden;
-    padding: 0 1em;
+  .emoji {
+    &-container {
+      all: unset;
+      grid-area: emoji;
+      overflow: hidden;
+      background: white;
+      padding: 0 1em;
+    }
+
+    &-box {
+      color: color(emoji-dark);
+      font-size: 8.4vw;
+      margin: auto;
+    }
   }
 
-  .emoji-box {
-    font-size: 8.4vw;
-    margin: auto;
-  }
-
-  //===============================//
+  //=========================//
   //===// Main > Impact //===//
-  //==============================//
+  //=========================//
 
   .impact {
     &__emoji {
       &--quote {
         &--inner,
         &--outer {
-          bottom: -33.5px;
-          right: -33.5px;
+          bottom: -36.5px;
+          right: -36.5px;
         }
       }
     }

@@ -15,7 +15,7 @@
 
 - układ:
 
-  - logo/menu,
+  - nawigacja,
   - zawartość,
   - stopka.
 
@@ -33,6 +33,8 @@
 | widok przystowany do korzystania na smartphonie, hamburger menu (nawigacja rozwijana) (pierwotny design strony), | widok mobilny, pasek nawigacji na górze, dostosowanie czcionek i animacji do większych ekranów, | widok desktop , dostosowanie czcionek i animacji do komputerów stacjonarnych, |
 
 - użyto znaczników semantycznych,
+
+- linki nawigacji przenoszące do odpowiadającej im sekcji strony,
 
 - okno popup umieszczone w stopce strony, zawiera:
 

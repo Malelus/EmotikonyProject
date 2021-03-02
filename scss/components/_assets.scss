@@ -83,9 +83,7 @@
   display: inline-block;
   background: transparent;
   border: none;
-  outline: none;
   cursor: pointer;
-  margin: 0;
   padding: 10px;
   transition: transform 0.15s ease-in-out, opacity time(btn-anim-time) ease;
 
@@ -198,7 +196,7 @@
     color: color(txt-accent);
     font-size: 1.25rem;
     font-weight: 600;
-    margin: 2.2rem 0 0.8rem 0;
+    margin: 2.2rem 0 0.8rem;
   }
 
   &__text {

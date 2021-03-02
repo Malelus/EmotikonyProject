@@ -24,14 +24,22 @@
   //===// Main //===//
   //================//
 
-  //===// Section elements //===//
+  //===// Section spacing //===//
 
-  .section__title {
-    font-size: 2.25rem;
+  section + section {
+    padding: 3.7em 0 2.7em;
   }
 
-  .section__text {
-    font-size: 1.15rem;
+  //===// Section elements //===//
+
+  .section {
+    &__title {
+      font-size: 2.25rem;
+    }
+
+    &__text {
+      font-size: 1.15rem;
+    }
   }
 
   //==================================//
@@ -50,12 +58,12 @@
       all: unset;
       display: flex;
       justify-content: space-around;
-      margin: 1rem 0 0;
+      margin-top: 1rem;
     }
 
     &__item {
       & + & {
-        margin: 0 0 0 1em;
+        margin-left: 1em;
       }
     }
 
@@ -77,17 +85,17 @@
     margin: 0.5rem auto 0;
   }
 
-  //===============================//
+  //=========================//
   //===// Main > Impact //===//
-  //==============================//
+  //=========================//
 
   .impact {
     &__emoji {
       &--quote {
         &--inner,
         &--outer {
-          bottom: -30.5px;
-          right: -30.5px;
+          bottom: -31.5px;
+          right: -31.5px;
         }
       }
     }

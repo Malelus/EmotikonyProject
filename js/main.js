@@ -20,7 +20,6 @@ window.onload = () => {
   const rootElement = document.documentElement;
 
   // - scrollTo
-
   const scrollTo = document.querySelectorAll('.nav__link');
 
   //=============================//
@@ -173,32 +172,31 @@ window.onload = () => {
     });
   });
 
-  //===// Scroll to //===//
+  //===// Scroll to section //===//
 
   scrollTo.forEach((item) => {
     item.addEventListener('click', (e) => {
       e.preventDefault();
 
-      let location = item.dataset.section;
-      let target = document.getElementById(location);
+      let targetElement = e.target.dataset.target;
+      let targetSection = document.getElementById(item.dataset.section);
 
-      if (target != null) {
-        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      if (targetSection != null) {
+        targetSection.scrollIntoView({ behavior: 'smooth' });
 
         hamburger.classList.remove('hamburger--active');
         nav.classList.remove('nav__list--visibility');
 
-        if (location == 'footer') {
-          const popupTarget = e.target.dataset.target;
-          const popupElement = document.querySelector(popupTarget);
+        if (targetElement != null) {
+          const popupElement = document.querySelector(targetElement);
 
           if (popupElement != null) {
             setTimeout(() => {
               popupElement.classList.toggle('popup--active');
-            }, 650);
-          } else alert('No popup destination!');
+            }, 700);
+          } else console.log('No popup destination!');
         }
-      } else alert('No destination!');
+      } else console.log('No destination!');
     });
   });
 };
