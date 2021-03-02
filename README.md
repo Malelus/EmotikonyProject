@@ -34,6 +34,8 @@
 
 - użyto znaczników semantycznych,
 
+- użyto znaczników Open Graph (znaczniki wyświetlające podgląd strony w momencie udostępniania),
+
 - linki nawigacji przenoszące do odpowiadającej im sekcji strony,
 
 - okno popup umieszczone w stopce strony, zawiera:
