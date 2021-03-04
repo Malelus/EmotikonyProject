@@ -32,9 +32,11 @@
 | < 699px                                                                                                          | 700px - 999px                                                                                   | > 1000px                                                                      |
 | widok przystowany do korzystania na smartphonie, hamburger menu (nawigacja rozwijana) (pierwotny design strony), | widok mobilny, pasek nawigacji na górze, dostosowanie czcionek i animacji do większych ekranów, | widok desktop , dostosowanie czcionek i animacji do komputerów stacjonarnych, |
 
-- użyto znaczników semantycznych,
+- użyto:
 
-- użyto znaczników Open Graph (znaczniki wyświetlające podgląd strony w momencie udostępniania),
+  - znaczników semantycznych,
+  - grafiki SVG do wykonania głównego logo strony,
+  - znaczników Open Graph (znaczniki wyświetlające podgląd strony w momencie udostępniania).
 
 - linki nawigacji przenoszące do odpowiadającej im sekcji strony,
 
