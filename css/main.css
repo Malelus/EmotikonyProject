@@ -38,9 +38,12 @@ img {
   *,
 ::before,
 ::after {
-    animation-delay: -1ms !important;
-    animation-duration: 1ms !important;
-    animation-iteration-count: 1 !important;
+    -webkit-animation-delay: -1ms !important;
+            animation-delay: -1ms !important;
+    -webkit-animation-duration: 1ms !important;
+            animation-duration: 1ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
     background-attachment: initial !important;
     scroll-behavior: auto !important;
     transition-duration: 0s !important;
@@ -55,8 +58,6 @@ img {
   --logo-anim-time: ;
   --nav-hide-time: 0.35s;
   --nav-show-time: 0.5s;
-  --anim-delay: ;
-  --anim-delay--logo-icon: ;
 }
 
 .btn {
@@ -264,12 +265,35 @@ img {
   left: 0;
 }
 
+@-webkit-keyframes nav-hide {
+  0% {
+    transform: translateX(15%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
 @keyframes nav-hide {
   0% {
     transform: translateX(15%);
   }
   100% {
     transform: translateX(100%);
+  }
+}
+@-webkit-keyframes nav-show {
+  0% {
+    transform: translateX(100%);
+  }
+  70% {
+    transform: translateX(15%);
+  }
+  85% {
+    transform: translateX(15.5%);
+  }
+  100% {
+    transform: translateX(15%);
   }
 }
 @keyframes nav-show {
@@ -449,12 +473,14 @@ header {
   text-align: center;
   transform: translateX(100%);
   transition: opacity 0.5s ease, visibility 0.5s ease;
-  animation: nav-hide 0.35s ease-in-out;
+  -webkit-animation: nav-hide 0.35s ease-in-out;
+          animation: nav-hide 0.35s ease-in-out;
 }
 .nav__list--visibility {
   opacity: 1;
   visibility: visible;
-  animation: nav-show 0.5s ease-in-out forwards;
+  -webkit-animation: nav-show 0.5s ease-in-out forwards;
+          animation: nav-show 0.5s ease-in-out forwards;
 }
 .nav__link {
   color: #f2d785;
@@ -793,6 +819,4 @@ footer {
   .btn--scrollUp {
     font-size: 3rem;
   }
-}
-
-/*# sourceMappingURL=main.css.map */
+}/*# sourceMappingURL=main.css.map */
