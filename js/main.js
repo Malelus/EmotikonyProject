@@ -192,7 +192,7 @@ window.onload = () => {
 
           if (popupElement != null) {
             setTimeout(() => {
-              popupElement.classList.toggle('popup--active');
+              popupElement.classList.add('popup--active');
             }, 700);
           } else console.log('No popup destination!');
         }
