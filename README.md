@@ -1,6 +1,6 @@
 # Strona o Emotikonach i ich znaczeniu w komunikacji.
 
-> ### [Link do strony](https://malelus.github.io/Project_Emotikony/)
+> ### [Link do strony](https://emoticons.mndev.eu)
 
 ---
 
